@@ -20,7 +20,10 @@ struct MainView: View {
 }
 
 struct MainView_Previews: PreviewProvider {
+    @StateObject static var oo = NavigationOO()
+
     static var previews: some View {
         MainView()
+            .environmentObject(oo)
     }
 }
